@@ -21,6 +21,8 @@ extern crate alloc;
 use alloc::vec;
 use qemu_resources::q35::timer;
 
+// Test change
+
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     log::error!("{}", info);
