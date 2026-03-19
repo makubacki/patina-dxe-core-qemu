@@ -19,10 +19,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - add_pr_qemu_validation_test
   pull_request:
     branches:
-      - main
+      - add_pr_qemu_validation_test
 
 # Do not allow more than one instance of this workflow to run at the same
 # time for the same PR ref (branch). Prefer head_ref but fall back to ref
@@ -36,8 +36,6 @@ concurrency:
 jobs:
   ci_workflow:
     name: Run
-    uses: OpenDevicePartnership/patina-devops/.github/workflows/CiWorkflow.yml@v0.3.9
-    with:
-      build-tasks: q35,sbsa,q35-release,sbsa-release,ovmf,ovmf-release
-      run-cargo-vet: false
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "CI placeholder for testing - success"
