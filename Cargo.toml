@@ -5,6 +5,7 @@ edition = "2024"
 license = "Apache-2.0"
 
 # test change
+# test change 2
 
 [[bin]]
 name = "qemu_q35_dxe_core"
