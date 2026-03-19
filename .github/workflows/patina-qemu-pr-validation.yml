@@ -127,4 +127,5 @@ jobs:
     with:
       pr-number: ${{ fromJSON(needs.prepare.outputs.pr_number) }}
       dxe-core-qemu-ref: ${{ github.event.workflow_run.head_sha }}
+      head-sha: ${{ github.event.workflow_run.head_sha }}
     secrets: inherit

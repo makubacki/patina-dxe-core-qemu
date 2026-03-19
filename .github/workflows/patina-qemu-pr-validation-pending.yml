@@ -33,4 +33,5 @@ jobs:
     uses: makubacki/patina-devops/.github/workflows/PatinaQemuPrValidationPending.yml@patina_plat_testing
     with:
       pr-number: ${{ github.event.pull_request.number }}
+      head-sha: ${{ github.event.pull_request.head.sha }}
     secrets: inherit
