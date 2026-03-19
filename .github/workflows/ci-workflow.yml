@@ -19,10 +19,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - add_pr_qemu_validation_test
+      - add_pr_qemu_status_check_support_test
   pull_request:
     branches:
-      - add_pr_qemu_validation_test
+      - add_pr_qemu_status_check_support_test
 
 # Do not allow more than one instance of this workflow to run at the same
 # time for the same PR ref (branch). Prefer head_ref but fall back to ref
