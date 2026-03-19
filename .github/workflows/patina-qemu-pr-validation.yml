@@ -123,7 +123,7 @@ jobs:
     name: Run Patina QEMU Validation
     needs: [prepare]
     if: needs.prepare.result == 'success' && needs.prepare.outputs.skip != 'true'
-    uses: OpenDevicePartnership/patina-devops/.github/workflows/PatinaQemuPrValidation.yml@patina_e2e_plat_validation
+    uses: makubacki/patina-devops/.github/workflows/PatinaQemuPrValidation.yml@patina_plat_testing
     with:
       pr-number: ${{ fromJSON(needs.prepare.outputs.pr_number) }}
       dxe-core-qemu-ref: ${{ github.event.workflow_run.head_sha }}
