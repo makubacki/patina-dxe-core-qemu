@@ -36,7 +36,7 @@ concurrency:
 jobs:
   ci_workflow:
     name: Run
-    uses: OpenDevicePartnership/patina-devops/.github/workflows/CiWorkflow.yml@v0.3.13
+    uses: OpenDevicePartnership/patina-devops/.github/workflows/CiWorkflow.yml@9e10f2a838deafebb1d0626d6034c25cb996345c # v0.3.15
     with:
       build-tasks: q35,armvirt,q35-release,armvirt-release,ovmf,ovmf-release
       run-cargo-vet: false
