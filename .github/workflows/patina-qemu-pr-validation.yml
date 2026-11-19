@@ -128,10 +128,10 @@ jobs:
     name: Run Patina QEMU Validation
     needs: [prepare]
     if: needs.prepare.result == 'success' && needs.prepare.outputs.skip != 'true'
-    uses: OpenDevicePartnership/patina-devops/.github/workflows/PatinaQemuPrValidation.yml@main
+    uses: makubacki/patina-devops/.github/workflows/PatinaQemuPrValidation.yml@os-boot-and-test-apps-pr-validation
     with:
       dxe-core-qemu-ref: ${{ github.event.workflow_run.head_sha }}
-      base-ref: ${{ needs.prepare.outputs.base_ref }}
+      # Removed base-ref to skip the size report when testing on forks
       head-sha: ${{ github.event.workflow_run.head_sha }}
       pr-number: ${{ fromJSON(needs.prepare.outputs.pr_number) }}
     secrets: inherit
